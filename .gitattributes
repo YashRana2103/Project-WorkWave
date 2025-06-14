@@ -1,0 +1,13 @@
+# 1️⃣ Exclude all PHP files from stats
+*.php linguist-detectable=false
+
+# 2️⃣ (Optional) Exclude templating files referenced by Linguist’s docs
+*.tpl linguist-language=JavaScript
+
+# 3️⃣ Ensure JS gets counted properly, but exclude minified/dist files if needed
+*.js linguist-detectable=true
+*.min.js linguist-vendored=true
+
+# 4️⃣ Exclude generated, third‑party, or vendor code from language stats
+vendor/** linguist-vendored
+dist/** linguist-vendored
